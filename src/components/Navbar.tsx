@@ -11,13 +11,9 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
